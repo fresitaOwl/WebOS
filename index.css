@@ -1,0 +1,14 @@
+body{
+    background-image: url(claw\ arcade.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 2.5%;
+}
+
+.text{
+    text-align: center;
+    font-family: Bookman, URW Bookman L, serif;
+    size: 2.5rem;
+}
