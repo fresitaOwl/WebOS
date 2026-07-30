@@ -4,11 +4,29 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    margin: 2.5%;
 }
 
-.text{
-    text-align: center;
+
+.welcome{
+    border: solid;
+    border-radius: 10px;
+    margin: 2.5%;
+    outline-offset: 0.5rem;
+    text-align: start;
     font-family: Bookman, URW Bookman L, serif;
-    size: 2.5rem;
+    padding: 1%;
+}
+
+.up{
+    outline: 0.5rem solid rgb(202, 147, 220);
+    box-shadow: 0 0 0 1.3rem rgb(150, 188, 236);
+    background-color: #dca3ff;
+    background-color: rgba(81, 0, 196, 0.25); color: #fff;
+    border-radius: 10px;
+    margin: 2.5%;
+    outline-offset: 0.5rem;
+    text-align: start;
+    font-family: Bookman, URW Bookman L, serif;
+    padding: 1%;
+    align-items: center;
 }
