@@ -1,7 +1,58 @@
-setInterval(function (){
+function updateTime(){
 
-document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+var currentTime = new Date().toLocaleString();
+var timeText = document.querySelector("#timeElement");
+timeText.innerHTML = currentTime
 
-}, 1000);
+}
+setInterval (updateTime, 1000);
 
+//drag thing
+dragElement(document.getElementById("hi"));
 
+function dragElement(element) {
+  var STARTUPx = 0;
+  var STARTSIDEy = 0;
+  var NOWUPx = 0;
+  var NOWSIDESy = 0;
+  if (document.getElementById(element.id + "header")) {
+    
+    document.getElementById(element.id + "header").onmousedown = dragMouseDown;
+  } 
+    else {
+    
+    element.onmousedown = dragMouseDown;
+
+     }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    NOWUPx = e.clientX;
+    NOWSIDESy = e.clientY;
+    document.onmouseup = closeDragElement;
+    
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+  
+    STARTUPx = NOWUPx - e.clientX;
+    STARTSIDEy = NOWSIDESy - e.clientY;
+    NOWUPx = e.clientX;
+    NOWSIDESy = e.clientY;
+  
+    element.style.top = (element.offsetTop - STARTSIDEy) + "px";
+    element.style.left = (element.offsetLeft - STARTUPx) + "px";
+  }
+
+  function closeDragElement() {
+    
+    document.onmouseup = null;
+    document.onmousemove = null;
+
+  }
+}
