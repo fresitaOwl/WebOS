@@ -56,3 +56,28 @@ function dragElement(element) {
 
   }
 }
+
+//open or close window
+
+var hi = document.querySelector("#hi");
+var hiScreen = document.querySelector("#hi");
+
+function closeWindow(element){
+    element.style.display = "none"
+}
+
+function openWindow(element){
+    element.style.display = "block"
+}
+
+var hiScreenClose = document.querySelector("#hiclose")
+
+var hiScreenOpen = document.querySelector("#hiopen")
+
+hiScreenClose.addEventListener("click", function() {
+  closeWindow(hiScreen);
+});
+
+hiScreenOpen.addEventListener("click", function() {
+  openWindow(hiScreen);
+});

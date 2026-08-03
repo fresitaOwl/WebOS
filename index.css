@@ -43,3 +43,17 @@ body{
     padding: 1%;
     align-items: center;
 }
+
+.closebutton{
+    width: 50px;
+    height: 20px;
+    background-color: #9f42f0;
+    border-radius: 20px;
+    border: solid 5px rgba(119, 19, 190, 0.25);
+    text-align: center;
+}
+
+#hiopen{
+    margin-left: 2.5%;
+    text-align: left;
+}
