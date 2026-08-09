@@ -79,5 +79,25 @@ hiScreenClose.addEventListener("click", function() {
 });
 
 hiScreenOpen.addEventListener("click", function() {
-  openWindow(hiScreen);
+  if ( selectedIcon == hiScreenOpen ){
+   openWindow(hiScreen ); 
+   deselectIcon(hiScreenOpen);
+  }
+  else{
+    selectIcon (hiScreenOpen);
+  }
 });
+
+
+// notes 
+var selectedIcon = undefined;
+
+function selectIcon(element) {
+  element.classList.add("crow");
+  selectedIcon = element;
+} 
+
+function deselectIcon(element) {
+  element.classList.remove("crow");
+  selectedIcon = undefined;
+} 
