@@ -36,11 +36,29 @@
     </div>
 
     <!-- notes -->
-    <div id="desktopApps">
-        <div class="crow" style="text-align: center; padding: 16px; width: fit-content">
-      <img src="crow.gif" style="width: 60px; height: 60px; border-radius: 16px;">
+
+    <div id="writeopen">
+        <div class="crow" style="text-align: center; padding: 16px; width: fit-content"> </div>
+      <p style="cursor: pointer;"><img src="crow.gif" style="width: 60px; height: 60px; border-radius: 16px;"></p>
     <p> Silly Notes </p>
     </div>
+
+    <div id="write">
+    <div id="notes">
+        <p style="cursor: pointer" id="writeclose" class="closebutton2">Close</p>
+    <h1 id="writeheader"> Silly Notes</h1>
+    <div class="container">
+    <textarea name="text" id="text" placeholder="Be silly here..."></textarea>
+    <div>
+    <div id="button">
+        <button style="border: solid #9f42f0;" id="save"> Save </button>
+    </div>
+    </div>
+    <div id="list"></div>
+    </div>
+
+    </div>
+
     </div>
 
     <script src="./index.js"> </script>

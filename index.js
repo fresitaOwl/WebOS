@@ -88,8 +88,35 @@ hiScreenOpen.addEventListener("click", function() {
   }
 });
 
+//top window
+var bigIndex = 1;
 
-// notes 
+function windowtaphandling(element){
+    element.addEventListener("mousedown",() =>
+      handleWindowTap(element)
+  )
+
+function handleWindowTap(element){
+  bigIndex++;
+  element.style.zIndex = bigIndex;
+}
+}
+
+var topBar = document.querySelector("#id");
+  function openWindow(element){
+    element.style.display = "block";
+    bigIndex++;
+    element.style.zIndex = bigIndex;
+  }
+
+  function handleWindowTap(element){
+    bigIndex++;
+    element.style.zIndex = bigIndex;
+    topBar.style.zIndex = bigIndex + 1;
+    deselectIcon(selectedIcon);
+  }
+
+// select thingy
 var selectedIcon = undefined;
 
 function selectIcon(element) {
@@ -101,3 +128,79 @@ function deselectIcon(element) {
   element.classList.remove("crow");
   selectedIcon = undefined;
 } 
+
+//notes
+const textEl=document.getElementById("text");
+const saveButton=document.getElementById("save");
+const listEl=document.getElementById("list");
+
+const store=JSON.parse(localStorage.getItem("locker")) || [];
+
+function showNote(){
+  listEl.innerHTML=""
+  store.forEach((item,index)=>{
+    const p=document.createElement("p");
+    p.textContent=item.locker;
+
+    const delBtn=document.createElement("button");
+    delBtn.textContent="delete";
+    delBtn.classList="delete";
+
+    delBtn.addEventListener("click", ()=>{
+      delNote(index);
+    })
+
+    p.appendChild(delBtn);
+    listEl.appendChild(p);
+  })
+
+}
+
+saveButton.addEventListener("click", ()=>{
+  let text=textEl.value.trim();
+  if(text !== ""){
+    const noteObj={locker:text}
+    store.push(noteObj);
+    localStorage.setItem("locker", JSON.stringify(store));
+    showNote();
+    alert("DING! GOT IT! NOTE SAVED!");
+  }
+  textEl.value=""
+  textEl.focus();
+})
+
+function delNote(index){
+  store.splice(index, 1);
+  localStorage.setItem("locker", JSON.stringify(store));
+  showNote();
+}
+
+  showNote();
+
+
+
+//second note thingy to move
+  
+  dragElement(document.getElementById("write"));
+
+//open or close window
+
+var write = document.querySelector("#write");
+var writeScreen = document.querySelector("#write");
+var writeScreenClose = document.querySelector("#writeclose")
+var writeScreenOpen = document.querySelector("#writeopen")
+
+
+writeScreenClose.addEventListener("click", function() {
+  closeWindow(writeScreen);
+});
+
+writeScreenOpen.addEventListener("click", function() {
+  if ( selectedIcon == writeScreenOpen ){
+   openWindow(writeScreen ); 
+   deselectIcon(writeScreenOpen);
+  }
+  else{
+    selectIcon (writeScreenOpen);
+  }
+});

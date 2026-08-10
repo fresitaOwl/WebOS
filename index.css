@@ -58,6 +58,84 @@ body{
     text-align: left;
 }
 
-#desktopApps{
-    padding-top: 2.5%;
+#notes{
+    border: solid;
+    border-radius: 10px;
+    outline-offset: 0.5rem;
+    text-align: center;
+    font-family: Bookman, URW Bookman L, serif;
+    padding: 1%;
+    background-color: rgba(23, 19, 255, 0.25);
+    width: 300px;
+}
+
+#container{
+    background: white;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px black(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#text{
+    width: 280px;
+    height: 45px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(0, 0, 0);
+    background-color: #aa75cb;
+    resize: none;
+    outline: none;
+    font-size: 15px;
+    color: black;
+}
+
+#text::placeholder{
+    color: black;
+}
+
+#button button{
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    background-color: #813aad;
+    transition: 0.3s;
+    border: none;
+    font-family: Bookman, URW Bookman L, serif;
+    font-size: 15px;
+}
+
+#list{
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#writeheader{
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+}
+
+#write{
+    position: absolute;
+    top: 170px;
+    left: 400px;
+    border-radius: 10px;
+    padding: 1%;
+    z-index: 9;
+}
+
+.closebutton2{
+    width: 50px;
+    height: 20px;
+    background-color: #8a36d2;
+    border-radius: 20px;
+    border: solid 5px rgba(119, 19, 190, 0.25);
+    text-align: center;
+    
 }
