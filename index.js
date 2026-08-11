@@ -144,7 +144,7 @@ function showNote(){
 
     const delBtn=document.createElement("button");
     delBtn.textContent="delete";
-    delBtn.classList="delete";
+    delBtn.classList.add("delete");
 
     delBtn.addEventListener("click", ()=>{
       delNote(index);
@@ -202,5 +202,78 @@ writeScreenOpen.addEventListener("click", function() {
   }
   else{
     selectIcon (writeScreenOpen);
+  }
+});
+
+//draw
+
+const board = document.getElementById("board");
+const context = board.getContext("2d");
+const pickcolor = document.getElementById("pickcolor");
+const brushsize = document.getElementById("brushsize");
+const clean = document.getElementById("clean");
+const fill = document.getElementById("fill");
+
+board.addEventListener("mousedown", ()=> {isDrawing = true});
+board.addEventListener("mouseup", ()=> {
+  isDrawing = false;
+  context.beginPath();
+})
+board.addEventListener("mouseout", () => {isDrawing= false});
+board.addEventListener("mousemove", draw);
+
+board.addEventListener("mousedown", (e) => {
+  isDrawing = true;
+  e.stopPropagation();
+});
+
+clean.addEventListener("click", clearCanvas);
+fill.addEventListener("click", fillCanvas);
+
+function draw(e){
+if (!isDrawing) return;
+
+context.lineWidth = brushsize.value;
+context.lineCap = "round";
+context.strokeStyle = pickcolor.value;
+
+context.lineTo(e.offsetX, e.offsetY);
+context.stroke();
+context.beginPath();
+context.moveTo(e.offsetX, e.offsetY);
+}
+
+function clearCanvas(){
+  context.clearRect(0, 0, board.width, board.height);
+}
+
+function fillCanvas(){
+  context.fillStyle = pickcolor.value;
+  context.fillRect(0, 0, board.width, board.height);
+}
+
+//third note thingy to move
+  
+  dragElement(document.getElementById("drawthingy"));
+
+//open or close window
+
+var draw = document.querySelector("#drawthingy");
+var drawScreen = document.querySelector("#drawthingy");
+var drawScreenClose = document.querySelector("#drawclose")
+var drawScreenOpen = document.querySelector("#drawopen")
+
+
+drawScreenClose.addEventListener("click", function() {
+  closeWindow(drawScreen);
+});
+
+drawScreenOpen.addEventListener("click", function() {
+  if ( selectedIcon == drawScreenOpen ){
+   openWindow(drawScreen ); 
+   deselectIcon(drawScreenOpen);
+  }
+  else{
+    selectIcon (drawScreenOpen);
   }
 });

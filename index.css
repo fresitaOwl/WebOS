@@ -1,5 +1,5 @@
 body{
-    background-image: url(claw\ arcade.jpg);
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/01389d3a-71fa-45a7-826e-557bceda2d66/dlonfv5-9ce5db1a-ca1a-4f4e-a21c-058f803a6d66.png/v1/fill/w_1032,h_774,q_70,strp/claw_arcade_by_en_to_dlonfv5-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMCIsInBhdGgiOiIvZi8wMTM4OWQzYS03MWZhLTQ1YTctODI2ZS01NTdiY2VkYTJkNjYvZGxvbmZ2NS05Y2U1ZGIxYS1jYTFhLTRmNGUtYTIxYy0wNThmODAzYTZkNjYucG5nIiwid2lkdGgiOiI8PTIwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.e8NIWZiLQoTCWuc6P8-CJ1CcuXEZFFqhU0-Z1FcIc8w");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -128,9 +128,75 @@ body{
     border-radius: 10px;
     padding: 1%;
     z-index: 9;
+    display: none;
 }
 
 .closebutton2{
+    width: 50px;
+    height: 20px;
+    background-color: #8a36d2;
+    border-radius: 20px;
+    border: solid 5px rgba(119, 19, 190, 0.25);
+    text-align: center;
+    
+}
+
+#writeopen{
+    margin-left: 25px;
+}
+
+.delete{
+    color: black;
+    background-color: #813aad;
+    padding: 5px 8px;
+    border-radius: 6px;
+}
+
+#drawopen{
+    height: 70px;
+    position: absolute;
+    top: 480px;
+    left: 18px;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+}
+
+#board{
+    border: 1px solid blueviolet;
+    background-color: beige;
+    cursor: crosshair;
+}
+
+#tools{
+    margin: 10px;
+    top: 5px;
+}
+
+#drawthingy{
+    background-color:#aa75cb;
+    height: 600px;
+    width: 500px;
+    align-items: center;
+    text-align: center;
+     border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    border-radius: 10px;
+    padding: 1%;
+    z-index: 9;
+    display: none;
+}
+
+#drawheader{
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+}
+
+
+.closebutton3{
     width: 50px;
     height: 20px;
     background-color: #8a36d2;

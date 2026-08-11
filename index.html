@@ -57,9 +57,26 @@
     </div>
     <div id="list"></div>
     </div>
-
+    </div>
     </div>
 
+    <!--Drawing-->
+    <div id="drawopen">
+        <div class="cat" style="text-align: center; padding: 16px; width: fit-content"> </div>
+      <p style="cursor: pointer;"><img src="https://media.tenor.com/Pj1z6_WvKdwAAAAi/maxwell-cat-maxwell.gif" style="width: 60px; height: 60px; border-radius: 16px;"></p>
+    <p> Draw! </p>
+    </div>
+    <div id="drawthingy">
+         <p style="cursor: pointer" id="drawclose" class="closebutton3"> Close </p>
+    <div id="tools"> 
+        <h1 id="drawheader"> Draw your thoughts! </h1>
+        <input type="color" id="pickcolor" value="#000000">
+        <input type="range" id="brushsize" min="1" max="50" value="5">
+        <button id="clean"> Clean </button>
+        <button id="fill"> Fill </button>
+        <button style="border: solid #9f42f0;" id="save"> Save </button>
+    </div>
+    <canvas id="board" height="380" width="440"></canvas>
     </div>
 
     <script src="./index.js"> </script>
