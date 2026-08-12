@@ -227,6 +227,11 @@ board.addEventListener("mousedown", (e) => {
   e.stopPropagation();
 });
 
+brushsize.addEventListener("mousedown", (e) => {
+  isDrawing = true;
+  e.stopPropagation();
+});
+
 clean.addEventListener("click", clearCanvas);
 fill.addEventListener("click", fillCanvas);
 
