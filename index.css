@@ -206,3 +206,30 @@ body{
     text-align: center;
     
 }
+
+.controls button{
+    margin-top: 5px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    background-color: #813aad;
+    transition: 0.3s;
+    border: none;
+    font-family: Bookman, URW Bookman L, serif;
+    font-size: 15px;
+}
+
+#musicthingy{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #dca3ff;
+    height: 100%;
+    width: 500px;
+    align-items: center;
+    text-align: center;
+}
+
+#progressbar{
+    border: solid;
+    height: 10px;
+}

@@ -282,3 +282,124 @@ drawScreenOpen.addEventListener("click", function() {
     selectIcon (drawScreenOpen);
   }
 });
+
+//music
+
+const song = [
+  {
+    Title: "AiAiA",
+    Artist: "Ado",
+    src: "assets/music/【Ado】アイ・アイ・ア（AiAiA）.mp4",
+  },
+  {
+    Title: "FNAF 2 SONG",
+    Artist: "The living Tombstones",
+    src: "assets/music/Five Nights at Freddy's 2 Song - The Living Tombstone (FNAF2).mp4",
+  },
+  {
+    Title: "GLHF <3",
+    Artist: MICO,
+    src: "assets/music/MICO – glhfᐸ3 [official video].mp4",
+  },
+  {
+    Title: "IDOL",
+    Artist: "Yoasobi",
+    src: "assets/music/YOASOBI「アイドル」 Official Music Video.mp4",
+  },
+  {
+    Title: "Dear Athena",
+    Artist: "Sierra Sikora",
+    src: "assets/music/dear athena.mp4",
+  },
+  {
+    Title: "DIE IN A FIRE",
+    Artist: "The living tombstones FT. EileMonty & Orko",
+    src: "assets/music/Five Nights at Freddy's 3 Song (Feat. EileMonty & Orko) - Die In A Fire (FNAF3)  - Living Tombstone.mp4",
+  },
+  {
+    Title: "Villain (cover: Stella Jang)",
+    Artist: "Ado",
+    src: "assets/music/【Ado】Villain Utattemita (원곡：Stella Jang).mp4",
+  },
+  {
+    Title: "The moon will sing",
+    Artist: "The Crane Wives",
+    src: "assets/music/The Crane Wives - The Moon Will Sing (Lyric Video).mp4",
+  },
+  {
+    Title: "The Brave",
+    Artist: "Yoasobi",
+    src: "assets/music/YOASOBI「勇者」 Official Music Video／TVアニメ『葬送のフリーレン』オープニングテーマ.mp4",
+  },
+  {
+    Title: "Otomodachi",
+    Artist: "Phantom Siita",
+    src: "assets/music/ファントムシータ『おともだち』（OFFICIAL MUSIC VIDEO）.mp4",
+  }
+];
+
+let songIndex = 0;
+
+const Title = document.getElementById("Title");
+const Artist = document.getElementById("Artist");
+const back = document.getElementById("back");
+const pause = document.getElementById("pause");
+const next = document.getElementById("next");
+const progress = document.getElementById("progress");
+const progressbar = document.getElementById("progressbar");
+
+const audio = new Audio();
+
+function loadSong(song){
+  Title.textContent = song.Title;
+  Artist.textContent = song.Artist;
+  audio.textContent = song.src;
+}
+
+//finally play song
+
+loadSong(songs[songIndex]);
+
+function playSong(){
+  audio.play();
+  pause.textContent = "⏸";
+}
+
+function pauseSong(){
+  audio.pause();
+  pause.textContent = "⏯";
+}
+
+let isCurrentlyPlaying = false;
+pause.addEventListener ("click", () => {
+  isCurrentlyPlaying ? pauseSong(): playSong();
+  isCurrentlyPlaying = !isCurrentlyPlaying
+})
+
+next.addEventListener ("click", () => {
+  songIndex++;
+  if(songIndex > songs.length - 1) songIndex = 0;
+
+  loadSong(songs [songIndex]);
+  playSong();
+  isCurrentlyPlaying = true;
+
+})
+
+back.addEventListener ("click", () => {
+  songIndex--;
+  if (songIndex < 0) songIndex = songs.length - 1;
+
+  loadSong(songs [songIndex]);
+  playSong();
+  isCurrentlyPlaying = true;
+})
+
+audio.addEventListener("timeupdate", () => {
+  const progressbar = (audio.currentTime) / audio.duration * 100;
+  progressBarpercent.style.width = progressbar + "&";
+}) 
+
+audio.addEventListener ("ended", () => {
+  next.click();
+})
