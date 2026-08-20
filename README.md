@@ -1,5 +1,10 @@
 # WebOS
-My own silly web
+
+Hi! This is my webOS it's not based in anything especific but it's just my mind plastered online.
+
+Right now I just followed the tutorial for the first app and the top bar, but the rest of the apps were made not following the tutorial at all, I have a top bar, welcome screen, draw page and notes, i have an app that doesn't work yet is a music player but I'm suffering making it work, all working apps are movable and able to open and close.
+
+This code is made with Html, js and css.
 
 CREDITS:
  
@@ -10,3 +15,7 @@ BACKGROUND: https://www.deviantart.com/en-to/art/CLAW-ARCADE-1311194129
 CAT: https://tenor.com/es/view/maxwell-cat-maxwell-cat-kitty-happy-kitty-gif-4484868261207288284
 
 CROW: https://www.deviantart.com/k1-b0t/art/Testament-crow-gif-1079344359
+
+ADO: https://tenor.com/es/view/ado-licking-lick-singer-utaite-gif-12641311016250858371 
+
+MUKROW: https://tenor.com/es/view/murkrow-pokemon-spinning-gif-25679493 
