@@ -285,6 +285,39 @@ drawScreenOpen.addEventListener("click", function() {
 
 //music
 
+//drag thingy
+
+dragElement(document.getElementById("musicthingy"));
+
+//openthingy
+
+var music = document.querySelector("#musicthingy");
+var musicScreen = document.querySelector("#musicthingy");
+var musicScreenClose = document.querySelector("#musicclose")
+var musicScreenOpen = document.querySelector("#murkrow")
+
+
+musicScreenClose.addEventListener("click", function() {
+  closeWindow(musicScreen);
+});
+
+musicScreenOpen.addEventListener("click", function() {
+  if ( selectedIcon == musicScreenOpen ){
+   openWindow(musicScreen ); 
+   deselectIcon(musicScreenOpen);
+  }
+  else{
+    selectIcon (musicScreenOpen);
+  }
+});
+ 
+windowtaphandling(hiScreen);
+windowtaphandling(writeScreen);
+windowtaphandling(drawScreen);
+windowtaphandling(musicScreen);
+
+//start playing thing
+
 const song = [
   {
     Title: "AiAiA",
@@ -298,7 +331,7 @@ const song = [
   },
   {
     Title: "GLHF <3",
-    Artist: MICO,
+    Artist: "MICO",
     src: "assets/music/MICO – glhfᐸ3 [official video].mp4",
   },
   {
@@ -403,3 +436,4 @@ audio.addEventListener("timeupdate", () => {
 audio.addEventListener ("ended", () => {
   next.click();
 })
+
