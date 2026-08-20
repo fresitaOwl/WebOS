@@ -4,6 +4,8 @@ Hi! This is my webOS it's not based in anything especific but it's just my mind 
 
 Right now I just followed the tutorial for the first app and the top bar, but the rest of the apps were made not following the tutorial at all, I have a top bar, welcome screen, draw page and notes, i have an app that doesn't work yet is a music player but I'm suffering making it work, all working apps are movable and able to open and close.
 
+The only thing I've struggled with right now is the music, all the other things weren't that hard except for the drag thing since i don't know why it sometimes worked and sometimes it didn't.
+
 This code is made with Html, js and css.
 
 CREDITS:
