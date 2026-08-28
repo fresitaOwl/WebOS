@@ -226,22 +226,29 @@ body{
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgba(23, 19, 255, 0.25);
-    height: 110%;
-    width: 500px;
+    height: auto;
+    width: 280px;
     align-items: center;
     text-align: center;
     border-radius: 20px;
     position: absolute;
     top: 200px;
     left: 480px;
-    padding: 1%;
+    padding: 1% 1% 20px 1%;   
     z-index: 9;
     display: none;
 }
 
 #progressbar{
     border: solid;
+    margin: 5px;
     height: 10px;
+}
+
+#progress{
+    height: 100%;
+    width: 0%;
+    background-color: rgb(148, 43, 124);
 }
 
 #murkrow{
@@ -264,7 +271,7 @@ body{
 }
 
 #musicheader{
-  padding: 10px;
   cursor: move;
   z-index: 10;
 }
+

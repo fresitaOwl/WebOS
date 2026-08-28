@@ -433,7 +433,15 @@ audio.addEventListener("timeupdate", () => {
   progress.style.width = percent + "%";
 }) 
 
+progressbar.addEventListener("click", (e) => {
+  const width = progressbar.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+  audio.currentTime =  (clickX /  width) * duration;
+})
+
 audio.addEventListener ("ended", () => {
   next.click();
 })
 
+//volume bar
