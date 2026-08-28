@@ -322,52 +322,52 @@ const songs = [
   {
     Title: "AiAiA",
     Artist: "Ado",
-    src: "assets/music/aiaia-ado.mp3",
+    src: "./music/aiaia-ado.mp3",
   },
   {
     Title: "FNAF 2 SONG",
     Artist: "The living Tombstones",
-    src: "assets/music/fnaf-2.mp3",
+    src: "./music/fnaf-2.mp3",
   },
   {
     Title: "GLHF <3",
     Artist: "MICO",
-    src: "assets/music/glhf-mico.mp3",
+    src: "./music/glhf-mico.mp3",
   },
   {
     Title: "IDOL",
     Artist: "Yoasobi",
-    src: "assets/music/idol-yoasobi.mp3",
+    src: "./music/idol-yoasobi.mp3",
   },
   {
     Title: "Dear Athena",
     Artist: "Sierra Sikora",
-    src: "assets/music/dear-athena.mp3",
+    src: "./music/dear-athena.mp3",
   },
   {
     Title: "DIE IN A FIRE",
     Artist: "The living tombstones FT. EileMonty & Orko",
-    src: "assets/music/fnaf-3.mp3",
+    src: "./music/fnaf-3.mp3",
   },
   {
     Title: "Villain (cover: Stella Jang)",
     Artist: "Ado",
-    src: "assets/music/villain.ado.mp3",
+    src: "./music/villain-ado.mp3",
   },
   {
     Title: "The moon will sing",
     Artist: "The Crane Wives",
-    src: "assets/music/themoonwillsing-cranewives.mp3",
+    src: "./music/themoonwillsing-cranewives.mp3",
   },
   {
     Title: "The Brave",
     Artist: "Yoasobi",
-    src: "assets/music/thebrave-yoasobi.mp3",
+    src: "./music/thebrave-yoasobi.mp3",
   },
   {
     Title: "Otomodachi",
     Artist: "Phantom Siita",
-    src: "assets/music/otomodachi-phantomsiita.mp3",
+    src: "./music/otomodachi-phantomsiita.mp3",
   }
 ];
 
