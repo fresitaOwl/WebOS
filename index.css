@@ -176,13 +176,12 @@ body{
 
 #drawthingy{
     background-color: rgba(224, 19, 255, 0.25);
-    border: solid;
-    border-radius: 10px;
     height: 600px;
     width: 500px;
     align-items: center;
     text-align: center;
-     border-radius: 20px;
+    border: solid;
+    border-radius: 10px;
     position: absolute;
     top: 200px;
     left: 480px;
@@ -246,9 +245,9 @@ body{
 }
 
 #murkrow{
-    height: 70px;
+    height: 80px;
     position: absolute;
-    top: 175px;
+    top: 195px;
     left: 140px;
     border-radius: 10px;
     padding: 1%;
