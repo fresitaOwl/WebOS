@@ -275,3 +275,46 @@ body{
   z-index: 10;
 }
 
+.volume{
+    input[type=range]{
+        display: none;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row;
+
+    .icon{
+        font-size: 2rem;
+    }
+
+    .bar-box{
+        user-select: none;
+        touch-action: none;
+        padding: 10px 15px;
+        opacity: 0.7;
+        transition: opacity .2s;
+        cursor: pointer;
+    }
+
+    .bar-box:hover{
+        opacity: 1.2;
+    }
+    
+    .bar{
+    background-color: gray;
+    height: 10px;
+    width: 120px;
+    border-radius: 15px;
+    overflow: hidden;
+    pointer-events: none;
+    }
+
+    .bar-fill{
+        background-color: white;
+        width: 0%;
+        height: 100%;
+        background-clip: border-box;
+        pointer-events: none;
+    }
+}

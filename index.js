@@ -407,7 +407,7 @@ let isCurrentlyPlaying = false;
 pause.addEventListener ("click", () => {
   isCurrentlyPlaying ? pauseSong(): playSong();
   isCurrentlyPlaying = !isCurrentlyPlaying
-})
+});
 
 next.addEventListener ("click", () => {
   songIndex++;
@@ -417,7 +417,7 @@ next.addEventListener ("click", () => {
   playSong();
   isCurrentlyPlaying = true;
 
-})
+});
 
 back.addEventListener ("click", () => {
   songIndex--;
@@ -426,22 +426,97 @@ back.addEventListener ("click", () => {
   loadSong(songs [songIndex]);
   playSong();
   isCurrentlyPlaying = true;
-})
+});
 
 audio.addEventListener("timeupdate", () => {
   const percent = (audio.currentTime) / audio.duration * 100;
   progress.style.width = percent + "%";
-}) 
+});
 
 progressbar.addEventListener("click", (e) => {
   const width = progressbar.clientWidth;
   const clickX = e.offsetX;
   const duration = audio.duration;
   audio.currentTime =  (clickX /  width) * duration;
-})
+});
 
 audio.addEventListener ("ended", () => {
   next.click();
-})
+});
 
 //volume bar
+
+document.addEventListener("DOMContentLoaded", () =>{
+  const range = document.querySelector (".volume input[type=range]");
+
+const barHoverbox =
+document.querySelector(".volume .bar-box");
+const fills = document.querySelector(".volume .bar .bar-fill");
+
+range.addEventListener("change", (e) =>{
+  console.log("value", e.target.value)
+});
+
+const setValue = (value) =>{
+  fills.style.width = value + "%";
+  range.setAttribute("value", value);
+  range.dispatchEvent(new Event("change"));
+  audio.volume = value / 100;   
+}
+
+setValue(range.value);
+
+const calculatefills = (e) => {
+  let offsetX = e.offsetX
+
+  if (e.type === "touchmove"){
+    offsetX = e.touches[0].pageX - e.touches[0].target.offsetLeft
+  }
+
+  const width = e.target.offsetWidth - 30;
+
+  setValue(
+    Math.max(
+      Math.min(
+        (offsetX - 15) / width * 100.0,
+        100.0 ),
+        0
+    ),
+  );
+}
+
+let barStillDown = false;
+
+barHoverbox.addEventListener ("touchstart", (e) => {
+  e.stopPropagation();
+  barStillDown = true;
+  calculatefills(e);
+}, true);
+
+barHoverbox.addEventListener("mousedown", (e) => {
+  e.stopPropagation();
+  barStillDown = true;
+  calculatefills(e);
+});
+
+barHoverbox.addEventListener("mousemove", (e) =>{
+  if(barStillDown){
+    e.stopPropagation();
+    calculatefills(e);
+  }
+});
+
+barHoverbox.addEventListener("wheel", (e) =>{
+  const newValue = +range.value + e.deltaY * 0.5;
+
+  setValue(Math.max(
+    Math.min(
+      newValue,
+      100.0),
+  ))
+});
+
+document.addEventListener("touchend", (e) => {
+  barStillDown = false;
+}, true);
+});
