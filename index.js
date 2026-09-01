@@ -323,51 +323,61 @@ const songs = [
     Title: "AiAiA",
     Artist: "Ado",
     src: "./music/aiaia-ado.mp3",
+    cover: "./gifs/ado-licking.gif",
   },
   {
     Title: "FNAF 2 SONG",
     Artist: "The living Tombstones",
     src: "./music/fnaf-2.mp3",
+    cover: "./gifs/fnaf-fnaf-meme.gif",
   },
   {
     Title: "GLHF <3",
     Artist: "MICO",
     src: "./music/glhf-mico.mp3",
+    cover:"./gifs/cat.gif",
   },
   {
     Title: "IDOL",
     Artist: "Yoasobi",
     src: "./music/idol-yoasobi.mp3",
+    cover:"./gifs/hatsune-miku-dance.gif",
   },
   {
     Title: "Dear Athena",
     Artist: "Sierra Sikora",
     src: "./music/dear-athena.mp3",
+    cover: "./gifs/athena-epic-the-musical.gif",
   },
   {
     Title: "DIE IN A FIRE",
     Artist: "The living tombstones FT. EileMonty & Orko",
     src: "./music/fnaf-3.mp3",
+    cover:"./gifs/fnaf-2-puppet-gangnam-style.gif",
   },
   {
-    Title: "Villain (cover: Stella Jang)",
+    Title: "Villain (Cover: Stella Jang)",
     Artist: "Ado",
     src: "./music/villain-ado.mp3",
+    cover: "./gifs/ado-fries.gif",
   },
   {
-    Title: "The moon will sing",
+    Title: "The Moon Will Sing",
     Artist: "The Crane Wives",
     src: "./music/themoonwillsing-cranewives.mp3",
+    cover:"./gifs/lovely-seal-seal-in-the-moon.gif",
   },
   {
     Title: "The Brave",
     Artist: "Yoasobi",
     src: "./music/thebrave-yoasobi.mp3",
+    cover:"./gifs/frieren-spin.gif",
   },
   {
     Title: "Otomodachi",
     Artist: "Phantom Siita",
     src: "./music/otomodachi-phantomsiita.mp3",
+    cover:"./gifs/ghost-ghosted.gif",
   }
 ];
 
@@ -375,6 +385,7 @@ let songIndex = 0;
 
 const Title = document.getElementById("Title");
 const Artist = document.getElementById("Artist");
+const cover = document.getElementById("cover");
 const back = document.getElementById("back");
 const pause = document.getElementById("pause");
 const next = document.getElementById("next");
@@ -386,6 +397,7 @@ const audio = new Audio();
 function loadSong(song){
   Title.textContent = song.Title;
   Artist.textContent = song.Artist;
+  cover.src = song.cover;
   audio.src = song.src;
 }
 

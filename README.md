@@ -2,6 +2,8 @@
 
 Hi! This is my webOS it's not based in anything especific but it's just my mind plastered online.
 
+When I first started it, I was hoping to get Artemis LEGO, however, when I realized I was advancing on my journey of coding I realized I wouln´t take that long to do this page to get around 80 hours of stardust, maybe iwith bonus I could have done it but I really doubt it, it did get me to be reallly discouraged when i noticed it, but i also notived that i was enjoying doinf this more than i thought I would, which made me keep going, my goal had change from doing something for an object to doing something i would enjoy loooking at and would give me happiness when i finished it, many people might say that the page is a bit overloaded with colors but I actually made that on purpose to create a dopamine overload that would make me keep going even on my bad days, so i hope that whoever checks my page also enjoys it as much as i do. 
+
 Right now I just followed the tutorial for the first app and the top bar, but the rest of the apps were made not following the tutorial at all, I have a top bar, welcome screen, draw page and notes, i have an app that doesn't work yet is a music player but I'm suffering making it work, all working apps are movable and able to open and close.
 
 The only thing I've struggled with right now is the music, all the other things weren't that hard except for the drag thing since i don't know why it sometimes worked and sometimes it didn't.
