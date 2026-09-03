@@ -320,6 +320,12 @@ windowtaphandling(musicScreen);
 
 const songs = [
   {
+    Title: "I Got No Time",
+    Artist: "The Living Tombstone",
+    src: "./music/fnaf4.mp3",
+    cover:"./gifs/fnaf4.gif",
+  },
+  {
     Title: "AiAiA",
     Artist: "Ado",
     src: "./music/aiaia-ado.mp3",
@@ -327,7 +333,7 @@ const songs = [
   },
   {
     Title: "FNAF 2 SONG",
-    Artist: "The living Tombstones",
+    Artist: "The living Tombstone",
     src: "./music/fnaf-2.mp3",
     cover: "./gifs/fnaf-fnaf-meme.gif",
   },
@@ -351,7 +357,7 @@ const songs = [
   },
   {
     Title: "DIE IN A FIRE",
-    Artist: "The living tombstones FT. EileMonty & Orko",
+    Artist: "The Living Tombstone FT. EileMonty & Orko",
     src: "./music/fnaf-3.mp3",
     cover:"./gifs/fnaf-2-puppet-gangnam-style.gif",
   },
@@ -368,7 +374,7 @@ const songs = [
     cover:"./gifs/lovely-seal-seal-in-the-moon.gif",
   },
   {
-    Title: "The Brave",
+    Title: "Yuusha",
     Artist: "Yoasobi",
     src: "./music/thebrave-yoasobi.mp3",
     cover:"./gifs/frieren-spin.gif",
@@ -531,4 +537,22 @@ barHoverbox.addEventListener("wheel", (e) =>{
 document.addEventListener("touchend", (e) => {
   barStillDown = false;
 }, true);
+});
+
+//fortune cookie
+
+//move thingy
+dragElement(document.getElementById("cookiethingy"));
+
+//cookie
+let fortunes = [
+  "a",
+  "b",
+  "c",
+];
+
+document.getElementById("cookieopen").addEventListener("click", function(){
+  let randomIndex = Math.floor(Math.random() * fortunes.length);
+  document.getElementById("message").innerText = fortunes[randomIndex];
+
 });

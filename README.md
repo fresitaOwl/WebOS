@@ -23,3 +23,25 @@ CROW: https://www.deviantart.com/k1-b0t/art/Testament-crow-gif-1079344359
 ADO: https://tenor.com/es/view/ado-licking-lick-singer-utaite-gif-12641311016250858371 
 
 MUKROW: https://tenor.com/es/view/murkrow-pokemon-spinning-gif-25679493 
+
+MOON SEAL: https://tenor.com/es/view/seal-seals-seal-of-approval-seal-team-seal-of-approval-gif-gif-25139191
+
+PLSUH FREDDY PLSUH: https://tenor.com/es/view/fnaf-five-nights-at-freddy's-dance-freddy-fazbear-meme-gif-387447488759269797
+
+FREDBEAR DANCE: https://tenor.com/es/view/fnaf-fnaf-meme-freddy-meme-five-nights-at-freddy's-baile-gif-8876518410167919923
+
+PUPPET DANCE: https://tenor.com/es/view/fnaf-2-puppet-gangnam-style-gif-5017865932531913760
+
+SPIN CAT: https://tenor.com/es/view/spin-record-cat-gif-21749933
+
+ATHENA: https://tenor.com/es/view/athena-epic-the-musical-gif-8236272627798136061
+
+GHOST: https://tenor.com/es/view/ghost-ghosted-ghosting-ghosts-ghost-hunting-gif-11286733165591417609
+
+SPIN FRIEREN: https://tenor.com/es/view/фрирен-gif-17038796666077494080
+
+ADO EATING FRIES: https://tenor.com/es/view/ado-personal-notmine-keonsgif-gif-1040162299762041852
+
+MIKU CHIBI: https://tenor.com/es/view/hatsune-miku-dance-chibi-gif-15875552374729228028
+
+https://tenor.com/es/view/fortune-cookie-lqc-low-quality-cat-gif-2459625979126502241

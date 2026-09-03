@@ -318,3 +318,29 @@ body{
         pointer-events: none;
     }
 }
+
+.base{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: rgba(224, 19, 255, 0.25);
+    border: solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 315px;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+#cookieopen{
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    background-color: #813aad;
+    transition: 0.3s;
+    border: none;
+    font-family: Bookman, URW Bookman L, serif;
+    font-size: 15px;
+}
