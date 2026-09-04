@@ -544,11 +544,63 @@ document.addEventListener("touchend", (e) => {
 //move thingy
 dragElement(document.getElementById("cookiethingy"));
 
+//open & close
+
+var cookie = document.querySelector("#cookiethingy");
+var cookieScreen = document.querySelector("#cookiethingy");
+var cookieScreenClose = document.querySelector("#cookieclose")
+var cookieScreenOpen = document.querySelector("#maomao")
+
+
+cookieScreenClose.addEventListener("click", function() {
+  closeWindow(cookieScreen);
+});
+
+cookieScreenOpen.addEventListener("click", function() {
+  if ( selectedIcon == cookieScreenOpen ){
+   openWindow(cookieScreen ); 
+   deselectIcon(cookieScreenOpen);
+  }
+  else{
+    selectIcon (cookieScreenOpen);
+  }
+});
+ 
+windowtaphandling(hiScreen);
+windowtaphandling(writeScreen);
+windowtaphandling(drawScreen);
+windowtaphandling(musicScreen);
+
 //cookie
 let fortunes = [
-  "a",
-  "b",
-  "c",
+  "You will get money",
+  "A car will fall from the sky",
+  "You just got the super power of breathing oxigen and let it out as carbone dioxide",
+  "Congrats blinking is now available, you'll do it manually from now on!",
+  "Don't look back, he's right behind you...",
+  "Don't trust duolingo.. he's tracking you...",
+  "Ups! you just forgot what you were doing, good luck remebering!",
+  "You were chosen! What for? Who knows!",
+  "Your fortune just expired, try again later.",
+  "The answer to you question is... cheese",
+  "You'll get the best answer for an argument... unfortunately it will be three days later.",
+  "Bananas are berries, you have been lied your whole life",
+  "Did you know...? wombats poop is cube shaped",
+  "A crow will hate you if you don't respect it.. it will follow you for.",
+  "Octopus have three hearths. Use yours wisely.",
+  "Today's prediction: you will learn an unnecessary fact.",
+  "Rats are ticklish",
+  "Shrimps heart are on the head",
+  "A great opportunity will come when you are in the restroom",
+  "Soon you'll get the answer to yout questions... google will have them.",
+  "You will travel far.",
+  "Success is within your reach",
+  "Your next meal is more important than you think",
+  "You just used your whole luck here.",
+  "You'll lose your things just when you need them",
+  "Your phone will die just when you find a charger",
+  "The thing you were so excited fro will be canceled",
+  "The line you choose will be the slow one",
 ];
 
 document.getElementById("cookieopen").addEventListener("click", function(){

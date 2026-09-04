@@ -44,4 +44,4 @@ ADO EATING FRIES: https://tenor.com/es/view/ado-personal-notmine-keonsgif-gif-10
 
 MIKU CHIBI: https://tenor.com/es/view/hatsune-miku-dance-chibi-gif-15875552374729228028
 
-https://tenor.com/es/view/fortune-cookie-lqc-low-quality-cat-gif-2459625979126502241
+MAOMAO: https://tenor.com/es/view/maomao-apothecary-diaries-excisted-happy-extatic-gif-10881679822610309848
