@@ -359,3 +359,363 @@ body{
     padding: 1%;
     text-align: center;
 }
+
+#meow{
+    align-items: center;
+    display: none;
+}
+
+#clawopen{
+    position: absolute;
+    top: 514px;
+    left: 140px;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+}
+
+#wholeclawmachine{
+    position: absolute;
+    top: 200px;
+    left: 480px;
+    background-color: rgba(224, 19, 255, 0.25);
+    border: solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 315px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pix,
+.pix::before,
+.pix::after{
+    width: calc(var(--w) *  var(--m));
+    height: calc(var(--m) * var(--m));
+    image-rendering: pixelated;
+    background-size: (var(--m) * var(--m)) ;
+}
+
+.pix::before,
+.pix::after{
+    position: absolute;
+    content: '';
+}
+
+.clawmachine{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--brown);
+    overflow: hidden;
+}
+
+.collectionbox{
+    --h: 32px;
+    width: calc(var(--m) * var(--machine-width));
+    margin: calc(var(--m) * var(--h) * -1 - 10px) 0 24px;
+    display: flex;
+    align-items: bottom;
+    justify-content: start;
+}
+
+.collectionbox .toy-wrapper{
+    position: relative;
+    width: calc(100% / 6);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.collectionbox .toy-wrapper .toy::after{
+    top: auto;
+    bottom: 0;
+}
+
+.toy-wrapper .squeeze-in{
+    width: 0;
+    animation: squeeze-in forwards 0.4s;
+    animation-delay: 1.4s;
+}
+
+@keyframes squeeze-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% / 6);
+  }
+}
+
+@keyframes show-toy-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toy-wrapper .toy{
+    opacity: 0;
+    transform: translateY(-100vh);
+    animation: forwards show-toy-2 0.8s;
+    animation-delay: 1s;
+}
+
+.claw-machine.show-overlay::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--machine-color);
+  opacity: 0.6;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.box {
+  position: relative;
+  background-color: #7fcfed;
+  --w: var(--machine-width);
+  --h: 180px;
+}
+
+.box::before {
+  background-color: var(--brown);
+  top: calc(70px * var(--m));
+  width: 100%;
+  height: calc(var(--m) * 8px);
+  z-index: 5;
+}
+
+.box::after {
+  background-color: var(--machine-color);
+  top: calc(70px * var(--m));
+  right: 0px;
+  width: calc(var(--m) * 8px);
+  height: calc(var(--m) * 170px);
+  z-index: 2;
+}
+
+.topmachine,
+.bottommachine{
+    position: absolute;
+    width: 100%;
+    --h: 70px;
+    height: calc(var(--h) * var(--m));
+}
+
+.topmachine{
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.topmachine::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dca3ff;
+}
+
+.bottommachine{
+    bottom: 0;
+    background-color: #8a36d2;
+}
+
+.collectionpoint{
+    position: absolute;
+    bottom: 0;
+    background-image: url( );
+    --w: 44px;
+    --h: 24px;
+    z-index: 0;
+}
+
+.horizontalrail {
+  --h: 5px;
+  width: 100%;
+  background-color: #fff;
+  border-width: 2px 0;
+}
+
+.verticalrail {
+  position: absolute;
+  --h: 70px;
+  --w: 5px;
+  background-color: #fff;
+  border-width: 0 2px;
+}
+
+.armjoint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  --w: 5px;
+  --h: 5px;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.armjoint::after {
+  position: absolute;
+  border: solid var(--blue) 2px;
+  background-color: #fff;
+  --w: 10px;
+  --h: 10px;
+  top: calc(var(--m) * var(--h) * -0.25);
+  left: calc(var(--m) * var(--w) * -0.25);
+}
+
+.arm::after{
+    position: absolute;
+    --w: 13px;
+    --h: 7px;
+    bottom: calc(var(--m) * -1px);
+    left: calc(var(--m) * -3px);
+    background-image: url( );
+}
+
+.arm.missed::after{
+    background-image: url();
+}
+
+.control{
+    position: relative;
+    --h: 60px;
+    width: 100%;
+    text-align: right;
+    background-color: var(--dark-blue);
+}
+
+.cover{
+    position: absolute;
+    background-color: var(--machine-color);
+    --top-size: calc(var(--m) * 20px);
+    --bottom-size: calc(var(--m) * 10px);
+    z-index: 4;
+}
+
+.collectionarrow{
+    position: absolute;
+    left: calc(var(--m) * 21px);
+    top: calc(var(--m) * 9px);
+    --w: 8px;
+    --h: 4px;
+    background-image: url();
+    filter: sepia(1) brightness(0.5);
+}
+
+.bottom{
+    bottom: 0;
+    width: 100%;
+    height: calc(var(--m) * 170px);
+    width: calc(var(--m) * 8px);
+}
+
+.left{
+    top: 0;
+    right: 0%;
+    height: 100px;
+    width: calc(var(--m) * 116px);
+}
+
+.right{
+    top: 0;
+    right: 0px;
+    height: 100%;
+    width: calc(var(--m) * 116px);
+}
+
+.instruction{
+    position: absolute;
+    --w: 51px;
+    --h: 12px;
+    background-image: url();
+    top: calc(var(--m) * 34px);
+    right: calc(var(--m) * 11px);
+}
+
+.arm{
+    position: absolute;
+    --w: 7px;
+    --h: 28px;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px var(--blue);
+    transition: 0.3s;
+    margin-top: calc(var(--m) * -1px);
+    margin-left: calc(var(--m) * -1px);
+}
+
+.claws {
+  position: absolute;
+  --w: 3px;
+  --h: 10px;
+  bottom: calc(var(--m) * -5px);
+  left: calc(var(--m) * 2.5px);
+}
+
+.claws::before,
+.claws::after {
+  top: 0;
+  --w: 10px;
+  --h: 16px;
+  transition: 0.2s;
+}
+
+#duck{
+    position: absolute;
+    top: 145px;
+    left: 300px;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+}
+
+#game{
+    position: absolute;
+    top: 200px;
+    left: 180px;
+    background-color: rgba(8, 174, 240, 0.25);
+    border: solid;
+    border-radius: 10px;
+    width:auto;
+    height: 315px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#pato{
+    background-image: url(spaces.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: contain;
+    width: 900px;
+    height: 650px;
+    font-family: 'Games', sans-serif;
+}
+
+#score{
+    font-size: 30px;
+    color: white;
+    padding: 2%;
+}
+
+#hunt{
+    padding: 2%;
+    color: white;
+}

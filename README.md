@@ -45,3 +45,13 @@ ADO EATING FRIES: https://tenor.com/es/view/ado-personal-notmine-keonsgif-gif-10
 MIKU CHIBI: https://tenor.com/es/view/hatsune-miku-dance-chibi-gif-15875552374729228028
 
 MAOMAO: https://tenor.com/es/view/maomao-apothecary-diaries-excisted-happy-extatic-gif-10881679822610309848
+
+https://tenor.com/es/view/duck-ente-duck-vibe-duck-vibing-gif-2680707548688352038 
+
+https://tenor.com/es/view/deoxys-pokémon-shiny-attack-gif-13613420129603798073
+
+https://tenor.com/es/view/mega-rayquaza-shiny-gif-8739735507504903030
+
+<a href="https://www.clipartmax.com/middle/m2i8i8d3d3i8G6A0_logo-pkmn-center-by-honokawa-pokemon-center/" target="_blank">Logo Pkmn Center By Honokawa - Pokemon Center @clipartmax.com</a>
+
+Imagen de <a href="https://pixabay.com/es/users/placidplace-25572496/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7709489">Iris,Helen,silvy</a> en <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7709489">Pixabay</a>

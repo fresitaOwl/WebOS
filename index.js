@@ -601,10 +601,73 @@ let fortunes = [
   "Your phone will die just when you find a charger",
   "The thing you were so excited fro will be canceled",
   "The line you choose will be the slow one",
+  "You should go to sleep",
+  "Your future is green, very green",
+  "Check behind you, there might be a donkey",
+  "Your fairytale is just begginig",
+  "You need to sleep",
+  "Open a blindbox, you'll get what you wish for.",
+  "Trust yourself",
+  "Use your mind wisely",
+  "Don't trust pigeons... they can hear us..."
 ];
 
 document.getElementById("cookieopen").addEventListener("click", function(){
   let randomIndex = Math.floor(Math.random() * fortunes.length);
   document.getElementById("message").innerText = fortunes[randomIndex];
 
+});
+
+//claw thingy  thingy to move
+  
+  dragElement(document.getElementById("wholeclawmachine"));
+
+//open or close window
+
+var meow = document.querySelector("#meow");
+var meowScreen = document.querySelector("#meow");
+var meowScreenClose = document.querySelector("#clawclose")
+var meowScreenOpen = document.querySelector("#clawopen")
+
+
+meowScreenClose.addEventListener("click", function() {
+  closeWindow(meowScreen);
+});
+
+meowScreenOpen.addEventListener("click", function() {
+  if ( selectedIcon == meowScreenOpen ){
+   openWindow(meowScreen ); 
+   deselectIcon(meowScreenOpen);
+  }
+  else{
+    selectIcon (meowScreenOpen);
+  }
+});
+
+//duck
+
+//claw thingy  thingy to move
+  
+  dragElement(document.getElementById("game"));
+
+//open or close window
+
+var duck = document.querySelector("#game");
+var duckScreen = document.querySelector("#game");
+var duckScreenClose = document.querySelector("#duckclose")
+var duckScreenOpen = document.querySelector("#duck")
+
+
+duckScreenClose.addEventListener("click", function() {
+  closeWindow(duckScreen);
+});
+
+duckScreenOpen.addEventListener("click", function() {
+  if ( selectedIcon == duckScreenOpen ){
+   openWindow(duckScreen ); 
+   deselectIcon(duckScreenOpen);
+  }
+  else{
+    selectIcon (duckScreenOpen);
+  }
 });
