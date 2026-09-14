@@ -646,9 +646,12 @@ meowScreenOpen.addEventListener("click", function() {
 
 //duck
 
-//claw thingy  thingy to move
+//duck thingy to move
   
   dragElement(document.getElementById("game"));
+  document.getElementById("pato").addEventListener("mousedown", function(e) {
+  e.stopPropagation();
+});
 
 //open or close window
 
@@ -671,3 +674,110 @@ duckScreenOpen.addEventListener("click", function() {
     selectIcon (duckScreenOpen);
   }
 });
+
+//start of game duck
+let deoxysList;
+let deoxysCount = 1;
+let deoxysImageName = "deoxys.gif";
+let deoxysWidth = 96;
+let deoxysHeight = 96;
+let deoxysVelocityX = 2.5;
+let deoxysVelocityY = 2.5;
+
+let gameWidth = document.getElementById("pato").clientWidth;
+let gameHeight = document.getElementById("pato").clientHeight;
+
+let score = 0;
+
+window.onload = function() {
+  setTimeout(addDeoxys, 500);
+  setInterval(moveDeoxys, 1000/60);
+}
+
+function addDeoxys(){
+  deoxysList = [];
+  deoxysCount = Math.floor(Math.random()*2) + 1;
+  for (let i = 0; i < deoxysCount; i++){
+    let deoxysImage = document.createElement("img");
+    deoxysImage.src = deoxysImageName;
+    deoxysImage.width = deoxysWidth;
+    deoxysImage.height = deoxysHeight;
+    deoxysImage.draggable = false;
+    deoxysImage.style.position = "absolute";
+
+    deoxysImage.onclick = function(){
+      score += 1;
+      document.getElementById("score").innerHTML = score;
+      this.parentElement.removeChild(this);  
+      let remainingdeoxys = [];
+      for (let i = 0; i < deoxysList.length; i++) {
+        if (deoxysList[i].image != this){
+          remainingdeoxys.push(deoxysList[i]);
+        }
+      }
+      deoxysList = remainingdeoxys;
+      if (deoxysList.length == 0) {
+        addrayquaza();
+      }
+    }
+    document.getElementById("pato").appendChild(deoxysImage);
+    deoxysImage.style.cursor = "url(cursorp.png), auto";
+
+    let newDeoxys = {
+      image: deoxysImage,
+      x: randomPosition(gameWidth - deoxysWidth),
+      y: randomPosition(gameHeight - deoxysHeight),
+      velocityX: deoxysVelocityX,
+      velocityY: deoxysVelocityY
+    }
+
+    newDeoxys.image.style.left = String(newDeoxys.x) + "px";
+    newDeoxys.image.style.top = String(newDeoxys.y) + "px";
+
+    deoxysList.push(newDeoxys);
+  }
+}
+
+function moveDeoxys() {
+  for(let i = 0; i < deoxysList.length; i++) {
+    let deoxys = deoxysList[i];
+    deoxys.x += deoxys.velocityX;
+    deoxys.y += deoxys.velocityY;
+
+     deoxys.x += deoxys.velocityX;
+    if(deoxys.x < 0 || deoxys.x + deoxysWidth > gameWidth){
+      deoxys.x -= deoxys.velocityX;
+      deoxys.velocityX *= -1;
+    }
+
+    deoxys.y += deoxys.velocityY;
+    if(deoxys.y < 0 || deoxys.y + deoxysHeight > gameHeight){
+      deoxys.y -= deoxys.velocityY;
+      deoxys.velocityY *= -1;
+    }
+
+    deoxys.image.style.left = String(deoxys.x) + "px";
+    deoxys.image.style.top = String(deoxys.y) + "px";
+  }
+}
+
+function addrayquaza(){
+  let rayquazaimage = document.createElement("img");
+  rayquazaimage.src = "rayquaza.gif";
+  rayquazaimage.width = 180;
+  rayquazaimage.height = 180;
+  rayquazaimage.style.position = "absolute";
+  rayquazaimage.style.left = "50%";
+  rayquazaimage.style.top = "80%";
+  rayquazaimage.style.transform = "translate(-50%, -50%";
+  document.getElementById("pato").appendChild(rayquazaimage);
+
+  setTimeout(function(){
+    document.getElementById("pato").removeChild(rayquazaimage);
+    addDeoxys();
+  }, 1500);
+}
+
+function randomPosition(limit) {
+  return Math.floor(Math.random()*limit);
+}

@@ -4,7 +4,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    overflow: 100px;
+    overflow:hidden;
 }
 
 
@@ -684,18 +684,19 @@ body{
 
 #game{
     position: absolute;
-    top: 200px;
-    left: 180px;
+    top: 100px;
+    left: 280px;
     background-color: rgba(8, 174, 240, 0.25);
     border: solid;
     border-radius: 10px;
-    width:auto;
-    height: 315px;
+    width: 940px;
+    height: 520px;
     padding: 20px;
-    display: flex;
+    display: absolute;
     justify-content: center;
     flex-direction: column;
     align-items: center; 
+    overflow: hidden;
 }
 
 #pato{
@@ -704,9 +705,12 @@ body{
     background-repeat: no-repeat;
     background-size: auto;
     background-attachment: contain;
-    width: 900px;
-    height: 650px;
+    width: 920px;
+    height: 450px;
     font-family: 'Games', sans-serif;
+    position: relative;
+     -webkit-user-drag: none;
+     user-select: none;
 }
 
 #score{
