@@ -1,3 +1,13 @@
+//main page sound
+const seaBackground = document.getElementById('background');
+seaBackground.volume=0.05;
+seaBackground.loop=true;
+
+//open icon
+const boing = document.getElementById('boing');
+boing.volume=0.3;
+boing.loop=false;
+
 function updateTime(){
 
 var currentTime = new Date().toLocaleString();
@@ -75,10 +85,13 @@ var hiScreenClose = document.querySelector("#hiclose")
 var hiScreenOpen = document.querySelector("#hiopen")
 
 hiScreenClose.addEventListener("click", function() {
+  if (seaBackground.paused) seaBackground.play();
   closeWindow(hiScreen);
 });
 
 hiScreenOpen.addEventListener("click", function() {
+   if (boing.paused) boing.play();
+  closeWindow(hiScreen);
   if ( selectedIcon == hiScreenOpen ){
    openWindow(hiScreen ); 
    deselectIcon(hiScreenOpen);
@@ -196,6 +209,7 @@ writeScreenClose.addEventListener("click", function() {
 });
 
 writeScreenOpen.addEventListener("click", function() {
+  if (boing.paused) boing.play();
   if ( selectedIcon == writeScreenOpen ){
    openWindow(writeScreen ); 
    deselectIcon(writeScreenOpen);
@@ -274,6 +288,7 @@ drawScreenClose.addEventListener("click", function() {
 });
 
 drawScreenOpen.addEventListener("click", function() {
+  if (boing.paused) boing.play();
   if ( selectedIcon == drawScreenOpen ){
    openWindow(drawScreen ); 
    deselectIcon(drawScreenOpen);
@@ -302,6 +317,7 @@ musicScreenClose.addEventListener("click", function() {
 });
 
 musicScreenOpen.addEventListener("click", function() {
+  if (boing.paused) boing.play();
   if ( selectedIcon == musicScreenOpen ){
    openWindow(musicScreen ); 
    deselectIcon(musicScreenOpen);
@@ -557,6 +573,7 @@ cookieScreenClose.addEventListener("click", function() {
 });
 
 cookieScreenOpen.addEventListener("click", function() {
+  if (boing.paused) boing.play();
   if ( selectedIcon == cookieScreenOpen ){
    openWindow(cookieScreen ); 
    deselectIcon(cookieScreenOpen);
@@ -635,6 +652,7 @@ meowScreenClose.addEventListener("click", function() {
 });
 
 meowScreenOpen.addEventListener("click", function() {
+  if (boing.paused) boing.play();
   if ( selectedIcon == meowScreenOpen ){
    openWindow(meowScreen ); 
    deselectIcon(meowScreenOpen);
@@ -666,6 +684,7 @@ duckScreenClose.addEventListener("click", function() {
 });
 
 duckScreenOpen.addEventListener("click", function() {
+  if (boing.paused) boing.play();
   if ( selectedIcon == duckScreenOpen ){
    openWindow(duckScreen ); 
    deselectIcon(duckScreenOpen);
@@ -684,8 +703,8 @@ let deoxysHeight = 96;
 let deoxysVelocityX = 2.5;
 let deoxysVelocityY = 2.5;
 
-let gameWidth = document.getElementById("pato").clientWidth;
-let gameHeight = document.getElementById("pato").clientHeight;
+let gameWidth = 920;
+let gameHeight = 440;
 
 let score = 0;
 
@@ -769,7 +788,7 @@ function addrayquaza(){
   rayquazaimage.style.position = "absolute";
   rayquazaimage.style.left = "50%";
   rayquazaimage.style.top = "80%";
-  rayquazaimage.style.transform = "translate(-50%, -50%";
+  rayquazaimage.style.transform = "translate(-50%, -50%)";
   document.getElementById("pato").appendChild(rayquazaimage);
 
   setTimeout(function(){

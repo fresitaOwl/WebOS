@@ -55,3 +55,9 @@ https://tenor.com/es/view/mega-rayquaza-shiny-gif-8739735507504903030
 <a href="https://www.clipartmax.com/middle/m2i8i8d3d3i8G6A0_logo-pkmn-center-by-honokawa-pokemon-center/" target="_blank">Logo Pkmn Center By Honokawa - Pokemon Center @clipartmax.com</a>
 
 Imagen de <a href="https://pixabay.com/es/users/placidplace-25572496/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7709489">Iris,Helen,silvy</a> en <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7709489">Pixabay</a>
+
+Sound Effect by <a href="https://pixabay.com/es/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=45797">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=45797">Pixabay</a>
+
+Sound Effect by <a href="https://pixabay.com/es/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=80816">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=80816">Pixabay</a>
+
+Sound Effect by <a href="https://pixabay.com/es/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=140378">Universfield</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=140378">Pixabay</a> 
