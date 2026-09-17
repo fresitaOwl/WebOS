@@ -430,11 +430,13 @@ loadSong(songs[songIndex]);
 function playSong(){
   audio.play();
   pause.textContent = "⏸";
+  seaBackground.pause();
 }
 
 function pauseSong(){
   audio.pause();
   pause.textContent = "⏯";
+  seaBackground.play();
 }
 
 let isCurrentlyPlaying = false;
@@ -707,10 +709,33 @@ let gameWidth = 920;
 let gameHeight = 440;
 
 let score = 0;
+let countdown = 60;
+let countdowntime;
 
+//countdown reset
+function startcountdown(){
+  countdown = 60;
+  document.getElementById("timer").innerHTML = countdown;
+
+  countdowntime = setInterval(() =>{
+countdown--;
+document.getElementById("timer").innerHTML = countdown;
+
+  
+
+  if (countdown <= 0){
+    clearInterval(countdowntime);
+    score = 0;
+    document.getElementById("score").innerHTML = score;
+    startcountdown();
+  }
+},1000);}
+
+//game
 window.onload = function() {
   setTimeout(addDeoxys, 500);
   setInterval(moveDeoxys, 1000/60);
+  startcountdown();
 }
 
 function addDeoxys(){
