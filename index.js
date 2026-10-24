@@ -637,7 +637,7 @@ document.getElementById("cookieopen").addEventListener("click", function(){
 
 });
 
-//claw thingy  thingy to move
+//claw thingy  thingy to move (not anymore now memory game)
   
   dragElement(document.getElementById("wholeclawmachine"));
 
@@ -664,6 +664,96 @@ meowScreenOpen.addEventListener("click", function() {
   }
 });
 
+//memory game
+var errors = 0;
+var Cardlist = [
+  "Abo", "Alien", "Buho", "Caine", "Chandelure", "Freddy","Frierennnn", "Nopluma", "Pato", "Penguin"
+]
+
+var cardset;
+var boardstate = [];
+var rows = 2;
+var columns = 10;
+var card1;
+var card2;
+
+
+function shufflecards(){
+  cardset = Cardlist.concat(Cardlist);
+  console.log(cardset);
+  for (let i = 0; i < cardset.length; i++) {
+  let j = Math.floor(Math.random()*cardset.length);
+  let temp = cardset[i];
+  cardset[i]= cardset[j];
+  cardset[j]= temp;
+    }
+}
+
+function startgame(){
+  const memoryBoard = document.getElementById("memoryboard");
+  for (let r = 0; r < rows; r++) {
+    let row = [];
+    for(let c = 0; c < columns; c++){
+      let cardImg = cardset.pop();
+      row.push(cardImg);
+      let card = document.createElement("img");
+      card.id = r.toString() + "-" + c.toString();
+      card.src = cardImg + ".png";
+      card.classList.add("card");
+      card.addEventListener("click", selectCard);
+
+      memoryBoard.append(card);
+    }
+    boardstate.push(row);
+  }
+  setTimeout(hideCards, 3000);
+}
+
+function hideCards(){
+  for(let r = 0; r < rows; r++){
+    for(let c = 0; c < columns; c++){
+
+      let card = document.getElementById(r.toString() + "-" + c.toString());
+      card.src = "Atras.png";
+    }
+  }
+}
+
+function selectCard(){
+  if(this.src.includes("Atras")){
+    if(!card1){
+      card1 = this;
+
+      let coords = card1.id.split("-");
+      let r = parseInt(coords[0]);
+      let c = parseInt(coords[1]);
+
+      card1.src = boardstate[r][c] + ".png";
+    }
+      else if (!card2 && this != card1){
+        card2 = this;
+
+      let coords = card2.id.split("-");
+      let r = parseInt(coords[0]);
+      let c = parseInt(coords[1]);
+
+      card2.src = boardstate[r][c] + ".png";
+      setTimeout(update, 1000);
+      }
+  }
+}
+
+function update(){
+  if(card1.src != card2.src){
+    card1.src = "Atras.png";
+    card2.src = "Atras.png";
+    errors +=1;
+    document.getElementById("errors").innerHTML = errors;
+  }
+
+  card1 = null;
+  card2 = null;
+}
 //duck
 
 //duck thingy to move
@@ -705,6 +795,10 @@ let deoxysHeight = 96;
 let deoxysVelocityX = 2.5;
 let deoxysVelocityY = 2.5;
 
+const initialvelX = 1.5;
+const initialvelY = 1.5;
+const increasevel = 0.5;
+
 let gameWidth = 920;
 let gameHeight = 440;
 
@@ -727,16 +821,23 @@ document.getElementById("timer").innerHTML = countdown;
     clearInterval(countdowntime);
     score = 0;
     document.getElementById("score").innerHTML = score;
+    deoxysVelocityX = initialVelocityX;
+    deoxysVelocityY = initialVelocityY;
     startcountdown();
   }
 },1000);}
 
-//game
-window.onload = function() {
+//game both memory and duck start
+window.onload = function () {
+  // memory
+  shufflecards();
+  startgame();
+
+  // duck hunt
   setTimeout(addDeoxys, 500);
-  setInterval(moveDeoxys, 1000/60);
+  setInterval(moveDeoxys, 1000 / 60);
   startcountdown();
-}
+};
 
 function addDeoxys(){
   deoxysList = [];
@@ -818,6 +919,8 @@ function addrayquaza(){
 
   setTimeout(function(){
     document.getElementById("pato").removeChild(rayquazaimage);
+    deoxysVelocityX += increasevel;
+    deoxysVelocityY += increasevel;
     addDeoxys();
   }, 1500);
 }
