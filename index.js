@@ -658,6 +658,7 @@ meowScreenOpen.addEventListener("click", function() {
   if ( selectedIcon == meowScreenOpen ){
    openWindow(meowScreen ); 
    deselectIcon(meowScreenOpen);
+   newGame();  
   }
   else{
     selectIcon (meowScreenOpen);
@@ -706,7 +707,7 @@ function startgame(){
     }
     boardstate.push(row);
   }
-  setTimeout(hideCards, 3000);
+  setTimeout(hideCards, 2000);
 }
 
 function hideCards(){
@@ -743,6 +744,7 @@ function selectCard(){
   }
 }
 
+
 function update(){
   if(card1.src != card2.src){
     card1.src = "Atras.png";
@@ -753,6 +755,17 @@ function update(){
 
   card1 = null;
   card2 = null;
+}
+
+function newGame(){
+  document.getElementById("memoryboard").innerHTML = "";
+  boardstate = [];
+  card1 = null;
+  card2 = null;
+  errors = 0;
+  document.getElementById("errors"),innerHTML = errors;
+  shufflecards();
+  startgame();
 }
 //duck
 
@@ -773,6 +786,7 @@ var duckScreenOpen = document.querySelector("#duck")
 
 duckScreenClose.addEventListener("click", function() {
   closeWindow(duckScreen);
+  stopdeoxys();
 });
 
 duckScreenOpen.addEventListener("click", function() {
@@ -780,6 +794,7 @@ duckScreenOpen.addEventListener("click", function() {
   if ( selectedIcon == duckScreenOpen ){
    openWindow(duckScreen ); 
    deselectIcon(duckScreenOpen);
+   startDeoxys();
   }
   else{
     selectIcon (duckScreenOpen);
@@ -787,7 +802,7 @@ duckScreenOpen.addEventListener("click", function() {
 });
 
 //start of game duck
-let deoxysList;
+let deoxysList = [];
 let deoxysCount = 1;
 let deoxysImageName = "deoxys.gif";
 let deoxysWidth = 96;
@@ -827,17 +842,31 @@ document.getElementById("timer").innerHTML = countdown;
   }
 },1000);}
 
-//game both memory and duck start
-window.onload = function () {
-  // memory
-  shufflecards();
-  startgame();
+let moveInterval;
+let addTimeout;
 
-  // duck hunt
-  setTimeout(addDeoxys, 500);
-  setInterval(moveDeoxys, 1000 / 60);
+function startDeoxys(){
+  stopdeoxys();
+
+  score = 0;
+  document.getElementById("score").innerHTML = score;
+  deoxysVelocityX = initialvelX;
+  deoxysVelocityY = initialvelY;
+
+  addTimeout = setTimeout(addDeoxys, 500);
+  moveInterval = setInterval(moveDeoxys, 1000/60)
   startcountdown();
-};
+}
+
+function stopdeoxys(){
+  clearInterval(moveInterval);
+  clearInterval(countdowntime);
+  clearTimeout(addTimeout);
+
+  deoxysList = [];
+  document.querySelectorAll("#pato img").forEach(img =>img.remove())
+}
+//game both memory and duck start
 
 function addDeoxys(){
   deoxysList = [];

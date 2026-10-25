@@ -2,7 +2,7 @@
 
 Hi! This is my webOS it's not based in anything especific but it's just my mind plastered online.
 
-When I first started it, I was hoping to get Artemis LEGO, however, when I realized I was advancing on my journey of coding I realized I wouln´t take that long to do this page to get around 80 hours of stardust, maybe iwith bonus I could have done it but I really doubt it, it did get me to be reallly discouraged when i noticed it, but i also notived that i was enjoying doinf this more than i thought I would, which made me keep going, my goal had change from doing something for an object to doing something i would enjoy loooking at and would give me happiness when i finished it, many people might say that the page is a bit overloaded with colors but I actually made that on purpose to create a dopamine overload that would make me keep going even on my bad days, so i hope that whoever checks my page also enjoys it as much as i do. 
+When I first started it, I was hoping to get Artemis LEGO, however, when I saw how fast I was advancing on my journey of coding I realized I wouln't take that long to do this page to get around 80 hours of stardust, maybe with bonus I could have done it but I really doubt it, it did get me to be reallly discouraged when i noticed it, but i also noticed that i was enjoying doing this more than i thought I would, which made me keep going, my goal had change from doing something for an object to doing something i would enjoy loooking at and would give me happiness when i finished it, many people might say that the page is a bit overloaded with colors but I actually made that on purpose to create a dopamine overload that would make me keep going even on my bad days, so i hope that whoever checks my page also enjoys it as much as i do. 
 
 Right now I just followed the tutorial for the first app and the top bar, but the rest of the apps were made not following the tutorial at all (The tutorial given by stardance specifically), I have a top bar, welcome screen, draw page and notes, i have an app that doesn't work yet is a music player but I'm suffering making it work, all working apps are movable and able to open and close.
 
@@ -48,18 +48,32 @@ MIKU CHIBI: https://tenor.com/es/view/hatsune-miku-dance-chibi-gif-1587555237472
 
 MAOMAO: https://tenor.com/es/view/maomao-apothecary-diaries-excisted-happy-extatic-gif-10881679822610309848
 
-https://tenor.com/es/view/duck-ente-duck-vibe-duck-vibing-gif-2680707548688352038 
+DANCING DUCK: https://tenor.com/es/view/duck-ente-duck-vibe-duck-vibing-gif-2680707548688352038 
 
-https://tenor.com/es/view/deoxys-pokémon-shiny-attack-gif-13613420129603798073
+SHINY DEOXYS: https://tenor.com/es/view/deoxys-pokémon-shiny-attack-gif-13613420129603798073
 
-https://tenor.com/es/view/mega-rayquaza-shiny-gif-8739735507504903030
+SHINY RAYQUAZA: https://tenor.com/es/view/mega-rayquaza-shiny-gif-8739735507504903030
 
-<a href="https://www.clipartmax.com/middle/m2i8i8d3d3i8G6A0_logo-pkmn-center-by-honokawa-pokemon-center/" target="_blank">Logo Pkmn Center By Honokawa - Pokemon Center @clipartmax.com</a>
+CURSOR ON DEOXYS HUNT: <a href="https://www.clipartmax.com/middle/m2i8i8d3d3i8G6A0_logo-pkmn-center-by-honokawa-pokemon-center/" target="_blank">Logo Pkmn Center By Honokawa - Pokemon Center @clipartmax.com</a>
 
-Imagen de <a href="https://pixabay.com/es/users/placidplace-25572496/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7709489">Iris,Helen,silvy</a> en <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7709489">Pixabay</a>
+CROAK: https://pixabay.com/sound-effects/nature-frog-croak-80816/
 
-Sound Effect by <a href="https://pixabay.com/es/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=45797">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=45797">Pixabay</a>
+BOING: https://pixabay.com/sound-effects/film-special-effects-cartoon-spring-boing-140378/ 
 
-Sound Effect by <a href="https://pixabay.com/es/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=80816">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=80816">Pixabay</a>
+JELLY: https://pixabay.com/sound-effects/film-special-effects-jellybounce-45797/ 
 
-Sound Effect by <a href="https://pixabay.com/es/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=140378">Universfield</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=140378">Pixabay</a> 
+ALIEN PLUSH: https://tenor.com/es/view/aftonsparv-alien-ikea-alien-ikea-stuffed-animal-gif-9893826581422849367 
+
+FRIEREN PLUSH: https://tenor.com/es/view/fren-gif-6959703443104400718 
+
+FREDDY PLUSH: https://tenor.com/es/view/freddy-fazbear-but-fat-gif-26955809
+
+CAINE PLUSH: https://tenor.com/es/view/canie-but-canie-digital-cirsus-amogus-wtf-gif-4800443736924540757
+
+CHANDELURE: https://tenor.com/es/view/pokémon-lumière-lugulabre-flame-gif-27093438
+
+PENGUIN: https://tenor.com/es/view/club-penguin-club-club-penguin-dance-penguin-dance-gif-24449551 
+
+DUCK: https://tenor.com/es/view/duck-gif-759423352650237075
+
+ADO: https://tenor.com/es/view/ado-personal-notmine-keonsgif-gif-1040162299762041852
